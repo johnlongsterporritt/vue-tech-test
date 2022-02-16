@@ -10,20 +10,18 @@ Please fork the repo and clone to your machine then begin with the following set
 npm install
 ```
 
+### Environment
+
+In your tech test instructions, you will find an API key. Create a file at the root of your project and call it `.env`. Inside your env file, create a new variable and paste in your API key.
+```
+VITE_API_KEY=[YOUR KEY HERE]
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
 ```
-
-### Environment
-
-In your tech test instructions, you will find an API key. Create a file at the root of your project and call it `.env`. Inside your env file, create a new variable:
-```
-VITE_API_KEY=[YOUR KEY HERE]
-```
-
-Place the key you have been provided in here. 
 
 <hr>
 
