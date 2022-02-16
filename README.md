@@ -1,14 +1,8 @@
-# vue-tech-test
+<img src="https://github.com/Fullcomms/vue-tech-test/blob/master/public/vue-favicon.svg" width="80"/>
 
-This template should help get you started developing with Vue 3 in Vite.
+# Full Comms - Vue Tech Test
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Please fork the repo and clone to your machine then begin with the following setup.
 
 ## Project Setup
 
@@ -22,14 +16,15 @@ npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Environment
 
-```sh
-npm run build
+In your tech test instructions, you will find an API key. Create a file at the root of your project and call it `.env`. Inside your env file, create a new variable:
+```
+VITE_API_KEY=[YOUR KEY HERE]
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+Place the key you have been provided in here. 
 
-```sh
-npm run lint
-```
+<hr>
+
+API powered by [Pexels](https://www.pexels.com/) - [API Documentation](https://www.pexels.com/api/documentation/)
