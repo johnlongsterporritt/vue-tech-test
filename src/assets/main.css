@@ -7,6 +7,10 @@ p, h1, h2, h3, h4, h5, h6, div, a {
   font-weight: 400;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600 !important;
+}
+
 body a {
   color: #4079B2;
   -o-transition: 0.3s;
@@ -12488,8 +12492,63 @@ header #MainNav nav #navbarNav a {
   margin: 0 1rem;
 }
 
+.text-contain {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.btn {
+  border: 0;
+  padding: 0.8rem 4rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #367CC1;
+  color: #fff;
+}
+
+.float-image {
+  position: absolute;
+  z-index: -1;
+}
+
 main > div {
   margin-bottom: 2rem;
+}
+
+.about .hero {
+  position: relative;
+  height: 50vh;
+  min-height: 300px;
+  background-image: url("https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress");
+  background-position: center 100%;
+  background-size: cover;
+}
+.about .hero .hero-info {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem 5rem;
+}
+.about .hero .hero-info h1 {
+  margin-bottom: 0;
+  font-weight: 800;
+}
+.about .hero .hero-info h3 {
+  font-size: 1.4rem;
+}
+.about .body {
+  position: relative;
+  margin: 6rem 0;
+  text-align: center;
+}
+.about .body .img-handshake {
+  top: -10%;
+  left: -20%;
+}
+.about .body .img-talk {
+  bottom: -10%;
+  right: -25%;
 }
 
 .photo-card-container {
@@ -12533,9 +12592,77 @@ main > div {
   }
 }
 
+@media (max-width: 767.98px) {
+  .btn {
+    padding: 0.8rem 5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .text-contain {
+    width: 85%;
+  }
+}
+@media (max-width: 575.98px) {
+  .text-contain {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .float-image {
+    display: none;
+  }
+}
 @media (max-width: 991.98px) {
   .photo-card h1 {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .about .body .img-handshake {
+    left: -30%;
+  }
+  .about .body .img-talk {
+    right: -30%;
+  }
+}
+@media (max-width: 991.98px) {
+  .about .body .img-handshake {
+    left: -45%;
+  }
+  .about .body .img-talk {
+    right: -50%;
+  }
+}
+@media (max-width: 767.98px) {
+  .about .hero {
+    min-height: auto;
+    height: 35vh;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .about .hero .hero-info {
+    text-align: center;
+    width: 100%;
+    padding: 1rem 5rem;
+  }
+  .about .hero .hero-info h3 {
+    display: none;
+  }
+  .about .body {
+    margin: 2rem 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .about .hero {
+    height: 20vh;
   }
 }
 

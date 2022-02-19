@@ -39,6 +39,40 @@
     }
 }
 
+// Buttons
+@include media-breakpoint-down(sm) {
+    .btn {
+        padding: 0.8rem 5rem;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .btn {
+        width: 100%;
+        padding: 0.8rem 1rem;
+    }
+}
+
+// Text Contain
+@include media-breakpoint-down(sm) {
+    .text-contain {
+        width: 85%;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .text-contain {
+        width: 100%;
+    }
+}
+
+// Floating Images
+@include media-breakpoint-down(sm) {
+    .float-image {
+        display: none;
+    }
+}
+
 // Home
 
 // - Photo Cards
@@ -46,6 +80,63 @@
     @include media-breakpoint-down(md) {
         h1 {
             font-size: 3rem;
+        }
+    }
+}
+
+// About
+.about {
+    @include media-breakpoint-down(lg) {
+        .body {
+            .img-handshake {
+                left: -30%;
+            }
+
+            .img-talk {
+                right: -30%;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .body {
+            .img-handshake {
+                left: -45%;
+            }
+
+            .img-talk {
+                right: -50%;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .hero {
+            min-height: auto;
+            height: 35vh;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .hero-info {
+                text-align: center;
+                width: 100%;
+                padding: 1rem 5rem;
+
+                h3 {
+                    display: none;
+                }
+            }
+        }
+
+        .body {
+            margin: 2rem 0;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        .hero {
+            height: 20vh;
         }
     }
 }
