@@ -1,3 +1,9 @@
 node_modules
 .env
 .DS_STORE
+/.idea/modules.xml
+/.idea/php.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
+/.idea/vue-tech-test.iml
+/.idea/watcherTasks.xml
