@@ -1,16 +1,18 @@
 <template>
-    <div>
-        <h5>
-            {{ photo.photographer }}
-        </h5>
+    <div class="col-12 col-md-6 col-lg-4 photo-card-container">
+      <div class="photo-card">
+          <h3>
+              {{ photo.photographer }}
+          </h3>
 
-        <p> 
-            {{ photo.alt }}
-        </p>
+          <p>
+              {{ photo.alt }}
+          </p>
 
-        <a href="">
-            View Original
-        </a>
+          <a href="">
+              View Original
+          </a>
+      </div>
     </div>
 </template>
 

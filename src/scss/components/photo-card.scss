@@ -1,0 +1,13 @@
+@import "../vars";
+@import "../mixins";
+
+.photo-card-container {
+  margin-bottom: 2rem;
+
+  .photo-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: $photo-card-border;
+    height: 100%;
+  }
+}

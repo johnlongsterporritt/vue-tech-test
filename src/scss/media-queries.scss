@@ -2,344 +2,50 @@
 @import "mixins";
 
 // General
-.section.intro-section.half-screen-section {
-    @include media-breakpoint-down(md) {
-        h1 {
-            font-size: 3rem !important;
-        }
-    }
 
-    @include media-breakpoint-down(sm) {
-        h1 {
-            font-size: 2rem !important;
+// - Mobile Nav
+#MainNav {
+    #navbarNav {
+        @include media-breakpoint-down(sm) {
+            background-color: $secondary-colour;
+            padding: 1rem 0.5rem;
+
+            li {
+                a {
+                    &:hover, &:active {
+                        color: $secondary-font-colour !important;
+
+                    }
+
+                    &:visited {
+                        color: $primary-font-colour;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            .navbar-nav {
+                position: absolute;
+                right: 0;
+
+                > li:last-of-type {
+                    a {
+                        margin-right: 0;
+                    }
+                }
+            }
         }
     }
 }
 
 // Home
-body.home {
-    // - Intro section
-    div.intro-section {
-        @include media-breakpoint-down(xl) {
-            h1 {
-                font-size: 4rem;
-                line-height: 90%;
-            }
-        }
 
-        @include media-breakpoint-down(md) {
-            .content {
-                h1 {
-                    font-size: 4rem;
-                    line-height: 100%;
-                }
-            }
-        }
-
-        @include media-breakpoint-down(xs) {
-            .content {
-                h1 {
-                    font-size: 3rem;
-                    line-height: 100%;
-                }
-
-                div.search-container {
-                    width: 100%;
-                }
-            }
-        }
-    }
-
-    div.popular-games-section {
-        @include media-breakpoint-down(sm) {
-            .row {
-                > div {
-                    margin-bottom: 4rem;
-                }
-
-                div:last-of-type {
-                    margin-bottom: 0 !important;
-                }
-
-                .pokemon-popular-container.pokemon-popular-container {
-                    h2 {
-                        width: auto;
-                        left: 40%;
-                    }
-                }
-
-                .ffvii-popular-container.ffvii-popular-container {
-                    h2 {
-                        left: 70%;
-                    }
-                }
-            }
-        }
-
-        @include media-breakpoint-down(md) {
-            .row {
-                .pokemon-popular-container.pokemon-popular-container {
-                    h2 {
-                        width: auto;
-                        left: 40%;
-                    }
-                }
-
-                .ffvii-popular-container.ffvii-popular-container {
-                    h2 {
-                        left: 70%;
-                    }
-                }
-
-                .goose-popular-container {
-                    h2 {
-                        left: 34%;
-                        width: 58%;
-                    }
-                }
-            }
-        }
-
-        @include media-breakpoint-down(lg) {
-            .row {
-                .pokemon-popular-container.pokemon-popular-container {
-                    h2 {
-                        left: 30%;
-                        width: 50%;
-                    }
-                }
-
-                .goose-popular-container {
-                    h2 {
-                        left: 30%;
-                        width: 50%;
-                    }
-                }
-            }
-        }
-    }
-
-    div.coming-soon-feature {
-        @include media-breakpoint-down(md) {
-            .embed-responsive {
-                margin-top: 4rem;
-                position: relative;
-                top: auto;
-                left: auto;
-                transform: none;
-            }
-        }
-    }
-
-    div.latest-article-feature {
-        @include media-breakpoint-down(md) {
-            img {
-                margin-top: 4rem;
-            }
-        }
-    }
-}
-
-// Platform Landing
-body.platform-landing {
-    .main-container {
-        @include media-breakpoint-down(md) {
-           .platform-intro-section {
-               .platform-name {
-                    font-size: 6rem;
-               }
-
-               .platform-image {
-                    width: 60vw;
-               }
-           }
-        }
-
-        @include media-breakpoint-down(sm) {
-            .platform-intro-section {
-                .platform-name {
-                    font-size: 5rem;
-                    margin-top: -14rem;
-                }
-
-                .platform-image {
-                    width: auto;
-                    margin-top: 20%;
-                    margin-left: 0%;
-                    top: auto;
-                    left: auto;
-                    right: 0;
-                    bottom: 4rem;
-                    transform: none;
-                    max-height: 50%;
-                }
-            }
-        }
-
-        @include media-breakpoint-down(xs) {
-            .platform-intro-section {
-                .platform-name {
-                    font-size: 3rem;
-                }
-
-                .platform-image {
-                    width: auto;
-                    margin-top: 20%;
-                    margin-left: 0%;
-                    top: auto;
-                    left: auto;
-                    bottom: 4rem;
-                    transform: none;
-                }
-            }
-        }
-    }
-}
-
-// Game Landing
-body.game-single, body.game-reviews {
-    .main-container {
-        @include media-breakpoint-down(lg) {
-            .game-content-row {
-                > div:nth-of-type(2) {
-                    display: none;
-                }
-            }
-        }
-
-        @include media-breakpoint-down(md) {
-            div.game-header {
-                div.game-intro {
-                    width: 100%;
-                    padding: 0;
-                    position: unset;
-
-                    .game-data-container {
-                        width: 100%;
-                        max-width: 100%;
-                        position: unset;
-                        top: unset;
-                        left: unset;
-                        transform: none;
-                        margin-top: 5rem;
-                        padding-bottom: 5rem;
-                        text-align: center;
-
-                        .game-boxart {
-                            margin-bottom: 1rem;
-                        }
-
-                        .game-data {
-                            div:nth-child(2) {
-                                text-align: center;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        @include media-breakpoint-down(sm) {
-            div.game-header {
-                div.game-intro {
-                    width: 100%;
-
-                    .game-data-container {
-                        .title {
-                            line-height: 3rem;
-                        }
-                    }
-                }
-            }
-        }
-
-        @include media-breakpoint-down(xs) {
-            div.game-header {
-                div.game-intro {
-                    position: relative;
-                }
-            }
-
-            .user-game-bar {
-                display: none;
-            }
-        }
-
-        .section.section-related-games {
-            @include media-breakpoint-down(sm) {
-                .related-games-list {
-                    > div:nth-child(3), > div:nth-child(4) {
-                        margin-top: 2rem;
-                    }
-                }
-            }
-
-            @include media-breakpoint-down(xs) {
-                .related-games-list {
-                    > div {
-                        margin-top: 0rem !important;
-                        margin-bottom: 2rem;
-                    }
-
-                    > div:last-of-type {
-                        margin-bottom: 0 !important;
-                    }
-                }
-            }
-        }
-    }
-}
-
-body.game-reviews {
-    @include media-breakpoint-down(xs) {
-        div.game-header {
-            div.game-intro {
-                .game-data-container {
-                    position: static !important;
-                }
-            }
-        }
-    }
-}
-
-// Game Wiki
-body.game-wiki {
+// - Photo Cards
+.photo-card {
     @include media-breakpoint-down(md) {
-        .game-wiki-card {
-            width: 33% !important;
-        }
-    }
-
-    @include media-breakpoint-down(sm) {
-        .game-wiki-card {
-            width: 100% !important;
-        }
-    }
-}
-
-// Reviews Page
-body.reviews-page {
-    @include media-breakpoint-down(lg) {
-        .review-card {
-            margin-bottom: 2rem;
-            height: auto !important;
-        }
-    }
-}
-
-// Articles
-.article-landing {
-    .section.intro-section.half-screen-section {
-        @include media-breakpoint-down(sm) {
-            min-height: 100vh;
-        }
-    }
-
-    .article-content {
-        @include media-breakpoint-down(md) {
-            p, h1, h2, h3, h4, h5, h6 {
-                max-width: none;
-            }
+        h1 {
+            font-size: 3rem;
         }
     }
 }

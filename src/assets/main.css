@@ -1,18 +1,45 @@
 @charset "UTF-8";
-p, h1, h2, h3, h4, h5, h6, div {
+p, h1, h2, h3, h4, h5, h6, div, a {
   color: #fff;
   line-height: 1.6;
   font-family: "Khula", sans-serif;
-  font-size: 17px;
+  font-size: 19px;
+  font-weight: 400;
 }
 
-a {
-  color: #0d6efd;
-  -o-transition: 0.3ss;
-  -ms-transition: 0.3ss;
-  -moz-transition: 0.3ss;
-  -webkit-transition: 0.3ss;
-  transition: 0.3ss;
+body a {
+  color: #4079B2;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+body a:visited {
+  color: #4079B2;
+}
+body a:hover {
+  text-decoration: none;
+}
+
+nav #navbarNav li a {
+  font-weight: 800;
+  color: #fff;
+}
+nav #navbarNav li a:hover {
+  color: #4079B2;
+  text-decoration: none;
+}
+
+.photo-card h3, .photo-card p {
+  color: #000;
+}
+.photo-card a {
+  color: #4079B2;
+  font-weight: 400;
+}
+.photo-card a:hover {
+  color: #000;
 }
 
 /*!
@@ -12454,221 +12481,52 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (max-width: 991.98px) {
-  .section.intro-section.half-screen-section h1 {
-    font-size: 3rem !important;
-  }
+header #MainNav nav {
+  padding: 0.5rem 0;
 }
-@media (max-width: 767.98px) {
-  .section.intro-section.half-screen-section h1 {
-    font-size: 2rem !important;
-  }
+header #MainNav nav #navbarNav a {
+  margin: 0 1rem;
 }
 
-body.home div.intro-section h1 {
-  font-size: 4rem;
-  line-height: 90%;
-}
-@media (max-width: 991.98px) {
-  body.home div.intro-section .content h1 {
-    font-size: 4rem;
-    line-height: 100%;
-  }
-}
-@media (max-width: 575.98px) {
-  body.home div.intro-section .content h1 {
-    font-size: 3rem;
-    line-height: 100%;
-  }
-  body.home div.intro-section .content div.search-container {
-    width: 100%;
-  }
-}
-@media (max-width: 767.98px) {
-  body.home div.popular-games-section .row > div {
-    margin-bottom: 4rem;
-  }
-  body.home div.popular-games-section .row div:last-of-type {
-    margin-bottom: 0 !important;
-  }
-  body.home div.popular-games-section .row .pokemon-popular-container.pokemon-popular-container h2 {
-    width: auto;
-    left: 40%;
-  }
-  body.home div.popular-games-section .row .ffvii-popular-container.ffvii-popular-container h2 {
-    left: 70%;
-  }
-}
-@media (max-width: 991.98px) {
-  body.home div.popular-games-section .row .pokemon-popular-container.pokemon-popular-container h2 {
-    width: auto;
-    left: 40%;
-  }
-  body.home div.popular-games-section .row .ffvii-popular-container.ffvii-popular-container h2 {
-    left: 70%;
-  }
-  body.home div.popular-games-section .row .goose-popular-container h2 {
-    left: 34%;
-    width: 58%;
-  }
-}
-@media (max-width: 1199.98px) {
-  body.home div.popular-games-section .row .pokemon-popular-container.pokemon-popular-container h2 {
-    left: 30%;
-    width: 50%;
-  }
-  body.home div.popular-games-section .row .goose-popular-container h2 {
-    left: 30%;
-    width: 50%;
-  }
-}
-@media (max-width: 991.98px) {
-  body.home div.coming-soon-feature .embed-responsive {
-    margin-top: 4rem;
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-  }
-}
-@media (max-width: 991.98px) {
-  body.home div.latest-article-feature img {
-    margin-top: 4rem;
-  }
+main > div {
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 991.98px) {
-  body.platform-landing .main-container .platform-intro-section .platform-name {
-    font-size: 6rem;
+.photo-card-container {
+  margin-bottom: 2rem;
+}
+.photo-card-container .photo-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  height: 100%;
+}
+
+@media (max-width: 767.98px) {
+  #MainNav #navbarNav {
+    background-color: #4079B2;
+    padding: 1rem 0.5rem;
   }
-  body.platform-landing .main-container .platform-intro-section .platform-image {
-    width: 60vw;
+  #MainNav #navbarNav li a:hover, #MainNav #navbarNav li a:active {
+    color: #000 !important;
+  }
+  #MainNav #navbarNav li a:visited {
+    color: #fff;
   }
 }
-@media (max-width: 767.98px) {
-  body.platform-landing .main-container .platform-intro-section .platform-name {
-    font-size: 5rem;
-    margin-top: -14rem;
-  }
-  body.platform-landing .main-container .platform-intro-section .platform-image {
-    width: auto;
-    margin-top: 20%;
-    margin-left: 0%;
-    top: auto;
-    left: auto;
+@media (min-width: 768px) {
+  #MainNav #navbarNav .navbar-nav {
+    position: absolute;
     right: 0;
-    bottom: 4rem;
-    transform: none;
-    max-height: 50%;
+  }
+  #MainNav #navbarNav .navbar-nav > li:last-of-type a {
+    margin-right: 0;
   }
 }
-@media (max-width: 575.98px) {
-  body.platform-landing .main-container .platform-intro-section .platform-name {
+
+@media (max-width: 991.98px) {
+  .photo-card h1 {
     font-size: 3rem;
-  }
-  body.platform-landing .main-container .platform-intro-section .platform-image {
-    width: auto;
-    margin-top: 20%;
-    margin-left: 0%;
-    top: auto;
-    left: auto;
-    bottom: 4rem;
-    transform: none;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  body.game-single .main-container .game-content-row > div:nth-of-type(2), body.game-reviews .main-container .game-content-row > div:nth-of-type(2) {
-    display: none;
-  }
-}
-@media (max-width: 991.98px) {
-  body.game-single .main-container div.game-header div.game-intro, body.game-reviews .main-container div.game-header div.game-intro {
-    width: 100%;
-    padding: 0;
-    position: unset;
-  }
-  body.game-single .main-container div.game-header div.game-intro .game-data-container, body.game-reviews .main-container div.game-header div.game-intro .game-data-container {
-    width: 100%;
-    max-width: 100%;
-    position: unset;
-    top: unset;
-    left: unset;
-    transform: none;
-    margin-top: 5rem;
-    padding-bottom: 5rem;
-    text-align: center;
-  }
-  body.game-single .main-container div.game-header div.game-intro .game-data-container .game-boxart, body.game-reviews .main-container div.game-header div.game-intro .game-data-container .game-boxart {
-    margin-bottom: 1rem;
-  }
-  body.game-single .main-container div.game-header div.game-intro .game-data-container .game-data div:nth-child(2), body.game-reviews .main-container div.game-header div.game-intro .game-data-container .game-data div:nth-child(2) {
-    text-align: center;
-  }
-}
-@media (max-width: 767.98px) {
-  body.game-single .main-container div.game-header div.game-intro, body.game-reviews .main-container div.game-header div.game-intro {
-    width: 100%;
-  }
-  body.game-single .main-container div.game-header div.game-intro .game-data-container .title, body.game-reviews .main-container div.game-header div.game-intro .game-data-container .title {
-    line-height: 3rem;
-  }
-}
-@media (max-width: 575.98px) {
-  body.game-single .main-container div.game-header div.game-intro, body.game-reviews .main-container div.game-header div.game-intro {
-    position: relative;
-  }
-  body.game-single .main-container .user-game-bar, body.game-reviews .main-container .user-game-bar {
-    display: none;
-  }
-}
-@media (max-width: 767.98px) {
-  body.game-single .main-container .section.section-related-games .related-games-list > div:nth-child(3), body.game-single .main-container .section.section-related-games .related-games-list > div:nth-child(4), body.game-reviews .main-container .section.section-related-games .related-games-list > div:nth-child(3), body.game-reviews .main-container .section.section-related-games .related-games-list > div:nth-child(4) {
-    margin-top: 2rem;
-  }
-}
-@media (max-width: 575.98px) {
-  body.game-single .main-container .section.section-related-games .related-games-list > div, body.game-reviews .main-container .section.section-related-games .related-games-list > div {
-    margin-top: 0rem !important;
-    margin-bottom: 2rem;
-  }
-  body.game-single .main-container .section.section-related-games .related-games-list > div:last-of-type, body.game-reviews .main-container .section.section-related-games .related-games-list > div:last-of-type {
-    margin-bottom: 0 !important;
-  }
-}
-
-@media (max-width: 575.98px) {
-  body.game-reviews div.game-header div.game-intro .game-data-container {
-    position: static !important;
-  }
-}
-
-@media (max-width: 991.98px) {
-  body.game-wiki .game-wiki-card {
-    width: 33% !important;
-  }
-}
-@media (max-width: 767.98px) {
-  body.game-wiki .game-wiki-card {
-    width: 100% !important;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  body.reviews-page .review-card {
-    margin-bottom: 2rem;
-    height: auto !important;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .article-landing .section.intro-section.half-screen-section {
-    min-height: 100vh;
-  }
-}
-@media (max-width: 991.98px) {
-  .article-landing .article-content p, .article-landing .article-content h1, .article-landing .article-content h2, .article-landing .article-content h3, .article-landing .article-content h4, .article-landing .article-content h5, .article-landing .article-content h6 {
-    max-width: none;
   }
 }
 

@@ -7,12 +7,34 @@
 
 body {
   min-height: 100vh;
-  background: #000f18;
+  background: $primary-colour;
   transition: color 0.5s, background-color 0.5s;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+header {
+  #MainNav {
+    nav {
+      padding: 0.5rem 0;
+
+      #navbarNav {
+        a {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+main {
+  > div {
+    margin-bottom: 2rem;
+  }
+}
+
+@import "components/photo-card";
 
 
 @import 'media-queries';

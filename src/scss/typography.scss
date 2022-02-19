@@ -1,14 +1,59 @@
 @import "vars";
 @import "mixins";
 
-p, h1, h2, h3, h4, h5, h6, div {
+// General
+p, h1, h2, h3, h4, h5, h6, div, a {
     color: $primary-font-colour;
     line-height: 1.6;
     font-family: 'Khula', sans-serif;
-    font-size: 17px;
+    font-size: 19px;
+    font-weight: 400;
 }
 
-a {
-    color: $link-colour;
-    @include transition(0.3s);
+body {
+    a {
+        color: $link-colour;
+        @include transition(0.3);
+
+        &:visited {
+            color: $link-colour;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+// Nav
+nav {
+    #navbarNav {
+        li {
+            a {
+                font-weight: 800;
+                color: $primary-font-colour;
+
+                &:hover {
+                    color: $secondary-colour;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// Photo Card Links
+.photo-card {
+    h3, p {
+        color: $secondary-font-colour;
+    }
+
+    a {
+        color: $link-colour;
+        font-weight: 400;
+
+        &:hover {
+            color: $secondary-font-colour;
+        }
+    }
 }

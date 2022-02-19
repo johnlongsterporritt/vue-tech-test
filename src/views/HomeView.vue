@@ -1,9 +1,11 @@
 <template>
     <main>
-        <photo-card v-for="photo in data.photos" 
-            v-bind:key="photo.id"
-            :photo="photo"
-        ></photo-card>
+        <div class="row">
+            <photo-card v-for="photo in data.photos"
+                v-bind:key="photo.id"
+                :photo="photo"
+            ></photo-card>
+        </div>
     </main>
 </template>
 
@@ -13,7 +15,7 @@
 
     export default {
         components: { PhotoCard },
-        
+
         data() {
             return {
                 data: {},
