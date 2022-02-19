@@ -26,6 +26,10 @@ body a:hover {
   text-decoration: none;
 }
 
+.modal p, .modal h1, .modal h2, .modal h3, .modal h4, .modal h5, .modal h6, .modal div, .modal a {
+  color: black;
+}
+
 nav #navbarNav li a {
   font-weight: 800;
   color: #fff;
@@ -12501,6 +12505,12 @@ header #MainNav nav #navbarNav a {
   border: 0;
   padding: 0.8rem 4rem;
   font-weight: 600;
+  transition: 0.3;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
 }
 
 .btn-primary {
@@ -12511,6 +12521,25 @@ header #MainNav nav #navbarNav a {
 .float-image {
   position: absolute;
   z-index: -1;
+}
+
+form input, form .form-control {
+  background-color: #2a5679;
+  color: white;
+  border: 0;
+}
+form input:focus, form .form-control:focus {
+  background-color: #367CC1;
+}
+form input::placeholder, form .form-control::placeholder {
+  color: white;
+  opacity: 1;
+}
+form input:-ms-input-placeholder, form .form-control:-ms-input-placeholder {
+  color: white;
+}
+form input::-ms-input-placeholder, form .form-control::-ms-input-placeholder {
+  color: white;
 }
 
 main > div {
@@ -12549,6 +12578,25 @@ main > div {
 .about .body .img-talk {
   bottom: -10%;
   right: -25%;
+}
+
+.contact .row .col-sm-6, .contact .row .col-12 {
+  margin-bottom: 1rem;
+}
+.contact textarea {
+  height: 100px;
+}
+.contact form label:not(.form-check-input) {
+  display: none;
+}
+.contact form input[type=text] {
+  width: 100%;
+}
+.contact form .enquiry-container {
+  height: 100%;
+}
+.contact form .enquiry-container textarea {
+  height: 100%;
 }
 
 .photo-card-container {

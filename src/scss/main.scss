@@ -41,6 +41,7 @@ header {
   border: 0;
   padding: $button-padding;
   font-weight: 600;
+  @include transition(0.3);
 }
 
 .btn-primary {
@@ -53,6 +54,33 @@ header {
   z-index: -1;
 }
 
+// - Forms
+form {
+  input, .form-control {
+    background-color: $input-background;
+    color: white;
+    border: 0;
+
+    &:focus {
+      background-color: $button-background-colour;
+    }
+
+    &::placeholder {
+      color: white;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      color: white;
+    }
+
+    &::-ms-input-placeholder {
+      color: white;
+    }
+
+  }
+}
+
 // Home
 
 main {
@@ -62,6 +90,7 @@ main {
 }
 
 // About
+
 .about {
   .hero {
     position: relative;
@@ -100,6 +129,37 @@ main {
     .img-talk {
       bottom: -10%;
       right: -25%;
+    }
+  }
+}
+
+// Contact
+.contact {
+  .row {
+    .col-sm-6, .col-12 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  form {
+    label:not(.form-check-input) {
+      display: none;
+    }
+
+    input[type='text'] {
+      width: 100%;
+    }
+
+    .enquiry-container {
+      height: 100%;
+
+      textarea {
+       height: 100%;
+      }
     }
   }
 }
