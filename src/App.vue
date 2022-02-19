@@ -38,6 +38,5 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600&display=swap');
-    @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css");
-    @import "@/assets/base.css";
+    @import "@/assets/main.css";
 </style>
